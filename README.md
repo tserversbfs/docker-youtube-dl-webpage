@@ -47,8 +47,8 @@ docker create \
 Use apache2 or nginx and reverse-proxy to port 80 or 443.
 
 ## Main page
-![Screenshot](ytdl1.PNG)
-![Screenshot](ytdl2.PNG)
+![Screenshot](ytdl1.PNG)<br/>
+![Screenshot](ytdl2.PNG)<br/>
 ![Screenshot](ytdl3.PNG)
 
 ## Completed page
