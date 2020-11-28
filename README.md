@@ -50,6 +50,14 @@ docker start ytdl
 
 Use apache2 or nginx and reverse-proxy to port 80 or 443.
 
+## Main page
+![Screenshot](ytdl1.PNG)
+![Screenshot](ytdl2.PNG)
+![Screenshot](ytdl3.PNG)
+
+## Completed page
+![Screenshot](ytdl4.png)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
