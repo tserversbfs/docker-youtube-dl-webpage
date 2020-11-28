@@ -17,32 +17,28 @@ like such:
 
 ```
 UID=$(id -u) && GID=$(id -g)
- 
-f_cfg=<location/folder/config>/ytdl
+
+appName="ytdl"
+
+f_cfg=<location/folder/config>/${appName}
 #where to look for container config files
 
 f_dest=<location/folder/complete>/complete 
 #where to look for downloaded content
 
+mkdir -p "${f_cfg}"/${appName}
+git clone https://github.com/tserversbfs/docker-youtube-dl-webpage.git "${f_cfg}"/${appName}
+
 docker create \
-     --name=ytdl \
+     --name=${appName} \
      --net=app_net \
      -e PUID="${UID}" \
      -e PGID="${GID}" \
      -e TZ=Europe/Paris \
-     -v "${f_cfg}":/config \
-     -v "{f_dest}":/complete \
+     -v "${f_cfg}"/${appName}:/config \
+     -v ${f_dest}/complete:/complete \
      --restart unless-stopped \
      ghcr.io/linuxserver/nginx 
-
-docker start ytdl \
-     && sleep 120 \
-     && docker stop ytdl
-     
-mkdir "${f_cfg=}"/custom-cont-init.d
-# In that folder place the init.sh file and folder from this repo.
-
-docker start ytdl
 
 ```
 
