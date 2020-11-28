@@ -1,6 +1,6 @@
 # docker-youtube-dl-webpage
 
-This is an add-on to linuxserver/nginx which will present users with a web interface to youtube-dl.
+This is an add-on to /linuxserver/docker-nginx which will present users with a web interface to youtube-dl.
 
 I created this project for myself. The bash scripting is NOT great. The PHP will make you cry,
 and the HTML/CSS will make your eyse bleed. 
