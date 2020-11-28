@@ -38,12 +38,17 @@ docker create \
 docker start ytdl \
      && sleep 120 \
      && docker stop ytdl
+     
+mkdir "${f_cfg=}"/custom-cont-init.d
+# In that folder place the init.sh file and folder from this repo.
+
+docker start ytdl
+
+```
 
 ## Usage
 
 Use apache2 or nginx and reverse-proxy to port 80 or 443.
-
-```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
