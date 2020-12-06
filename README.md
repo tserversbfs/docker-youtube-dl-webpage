@@ -20,10 +20,10 @@ UID=$(id -u) && GID=$(id -g)
 
 appName="ytdl"
 
-f_cfg=<location/folder/config>/${appName}
+f_cfg=<location/folder/config>
 #where to look for container config files
 
-f_dest=<location/folder/complete>/complete 
+f_dest=<location/folder/complete> 
 #where to look for downloaded content
 
 mkdir -p "${f_cfg}"/${appName}
